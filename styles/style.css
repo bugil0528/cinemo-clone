@@ -187,10 +187,43 @@ body {
 
 .eyebrow {
   color: #f28d77;
+  font-family: Inter, sans-serif;
+  font-weight: regular;
+  font-size: 10px;
 }
 
 .wordmark {
   font-family: Inter, sans-serif;
   font-weight: bold;
   font-size: 24px;
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.description {
+  font-weight: regular;
+  font-size: 15px;
+}
+
+.profile-card h2 {
+  font-weight: regular;
+  font-size: 18px;
+}
+
+.profile-card p {
+  font-weight: regular;
+  font-size: 11px;
+}
+
+button {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.project-note p {
+  font-weight: regular;
+  font-size: 11px;
 }

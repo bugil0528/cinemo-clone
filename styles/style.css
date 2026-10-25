@@ -227,3 +227,42 @@ button {
   font-weight: regular;
   font-size: 11px;
 }
+
+.wordmark {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

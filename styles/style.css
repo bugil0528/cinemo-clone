@@ -55,6 +55,66 @@ body {
   font-size: var(--fontsize-dt-main);
   line-height: var(--lineheight);
 }
+
+.header {
+  position: relative; /*position: absolute 쓰면 메인에서 사진이 헤더를 잡아먹어요*/
+  width: 100%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+}
+
+.brand-and-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: var(--fontsize-button);
+  font-weight: 400;
+  gap: 56px;
+}
+
+.netflex-identity {
+  flex-shrink: 0;
+  width: 113px;
+  height: 29px;
+}
+
+.primary-navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  flex-grow: 1;
+}
+.navigation-link {
+  color: var(--se-color);
+  white-space: nowrap;
+}
+.navigation-link:hover {
+  color: var(--tx-color);
+  font-weight: 700;
+}
+.my-page-link {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.Avatar-s {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../assets/avatar/Avatar-s.png");
+  background-size: cover;
+  border-radius: 8px;
+}
+.profile-link {
+  margin: 7.5px 0 7.5px 10px;
+}
+
 .film-metadata {
   display: flex;
   gap: 24px;
@@ -90,29 +150,6 @@ body {
   height: 2px;
   border-radius: 50%;
 }
-
-.header {
-  width: 100%;
-  height: 88px;
-  display: flex;
-  align-items: center;
-  padding: 0 64px;
-  position: absolute;
-}
-
-.brand-and-navigation {
-  display: flex;
-  align-items: center;
-}
-
-.wordmark {
-  font-family: Inter, sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-}
-
 .profile-selection {
   display: flex;
   flex-direction: column;

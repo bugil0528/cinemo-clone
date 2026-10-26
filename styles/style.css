@@ -150,6 +150,11 @@ body {
   height: 2px;
   border-radius: 50%;
 }
+/*Browse collection*/
+.browse-collections {
+  padding: 16px 64px 64px;
+}
+
 .profile-selection {
   display: flex;
   flex-direction: column;
@@ -272,11 +277,6 @@ body {
   background-color: #acaeb3;
 }
 
-footer {
-  width: 100%;
-  text-align: center;
-}
-
 .project-note {
   display: flex;
   flex-direction: column;
@@ -291,6 +291,27 @@ footer {
   font-weight: normal;
   font-size: 11px;
   margin: 0;
+}
+
+/*Footer*/
+
+footer {
+  padding: 40px 64px;
+  border-top: 1px solid #303237;
+  font-size: 11px;
+  color: var(--se-color);
+  font-weight: 400;
+}
+.footer-navigation {
+  font-size: var(--fontsize-secondary);
+  display: flex;
+  gap: 32px;
+}
+.project-notice {
+  line-height: 180%;
+}
+.copyright {
+  font-size: 10px;
 }
 /* Tablet */
 @media (max-width: 1023px) {

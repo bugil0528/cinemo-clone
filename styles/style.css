@@ -98,6 +98,14 @@ body {
 @media (max-width: 767px) {
 }
 
+.page-introduction {
+  justify-content: start;
+}
+
+.page-introduction.eyebrow {
+  font-size: 11px;
+}
+
 .profile-body {
   color: #f3f1ed;
   background-color: #101113;

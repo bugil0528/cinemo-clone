@@ -86,6 +86,7 @@ body {
   content: "";
   width: 2px;
   height: 2px;
+  border-radius: 50%;
 }
 .profile-body {
   color: #f3f1ed;

@@ -172,7 +172,7 @@ textarea {
 [hidden] {
   display: none !important;
 }
-body {
+.profile-body {
   color: #f3f1ed;
   background-color: #101113;
   font-family:
@@ -196,6 +196,8 @@ body {
   font-family: Inter, sans-serif;
   font-weight: bold;
   font-size: 24px;
+  display: flex;
+  flex-direction: row;
 }
 
 .page-title {
@@ -226,4 +228,55 @@ button {
 .project-note p {
   font-weight: regular;
   font-size: 11px;
+}
+
+.profile-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card img {
+  width: 152px;
+  height: 152px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.profile-header {
+  width: 1440px;
+  height: 88px;
 }

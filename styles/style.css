@@ -1,3 +1,93 @@
+:root {
+  /*색*/
+  --background-color: #101113;
+  --sf-color: #1a1c1f;
+  --tx-color: #f3f1ed;
+  --tx-bt-pr-color: #241512;
+  --se-color: #acaeb3;
+  --wc-color: #f28d77;
+  --bd-color: #303237;
+  --bt-se-color: #232529;
+
+  /*글자 크기(데스크톱)*/
+  --fontsize-dt-hero: 64px;
+  --fontsize-dt-title: 40px;
+  --fontsize-dt-section: 24px;
+  --fontsize-dt-main: 16px;
+  --fontsize-secondary: 12px;
+  --fontsize-button: 14px;
+
+  /*글자 크기(모바일)*/
+  --fontsize-mb-hero: 40px;
+  --fontsize-mb-title: 30px;
+  --fontsize-mb-section: 20px;
+  --fontsize-mb-main: 14px;
+
+  /*줄 높이*/
+  --lineheight: 1.8rem;
+
+  /*간격(공용)*/
+  --height-button: 48px;
+  --height-sm-button: 40px;
+
+  /*간격 (데스크톱)*/
+  --padding-dt-page-LR: 64px;
+  --gap-dt-section: 48px;
+  --gap-dt-card: 24px;
+
+  /*간격 (모바일)*/
+  --padding-mb-page-LR: 24px;
+  --gap-mb-section: 36px;
+  --gap-mb-card: 16px;
+
+  /*모서리*/
+  --border-radious-card_button: 4px;
+  --border-radious-profile: 8px;
+}
+body {
+  width: 100%;
+  margin: 0;
+  background: var(--background-color);
+  color: var(--tx-color);
+  font-family: Inter, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+  font-size: var(--fontsize-dt-main);
+  line-height: var(--lineheight);
+}
+.film-metadata {
+  display: flex;
+  gap: 24px;
+}
+.collection-label {
+  display: inline-block;
+  padding-left: 20px;
+  position: relative;
+}
+.collection-label::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: var(--wc-color);
+  content: "";
+  width: 24px;
+  height: 2px;
+}
+.deco-dot:not(:first-child) {
+  display: inline-block;
+  padding-left: 20px;
+  position: relative;
+}
+
+.deco-dot:not(:first-child)::before {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+  background-color: #acaeb3;
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+}
 /* 기본: Desktop (1024px 이상) */
 
 /* Tablet */

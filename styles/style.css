@@ -209,6 +209,11 @@ body {
   text-align: center;
 }
 
+/* mypage */
+.mypage-main {
+  padding: 56px 64px 54px;
+}
+
 .page-introduction {
   justify-content: start;
 }
@@ -286,7 +291,6 @@ profile-information img {
 
 .btn-profile-edit {
   color: #f3f1ed;
-
   width: 138px;
   height: 48px;
   padding: 0px 22px;
@@ -301,6 +305,58 @@ profile-information img {
 .label {
   font-size: 14px;
   font-weight: bold;
+}
+
+.title {
+  font-size: 24px;
+  font-family: Noto-Sans-KR, sans-serif;
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+
+.account-setting-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: 0.3px solid #303237;
+  border-bottom: 0.3px solid #303237;
+  padding: 24px 0px;
+}
+
+.setting-label {
+  color: #acaeb3;
+  font-size: 14px;
+  font-family: Noto-Sans-KR, sans-serif;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.setting-value {
+  color: #f3f1ed;
+  font-size: 17px;
+  font-family: Inter, sans-serif;
+  flex: 1;
+  min-width: 0;
+}
+
+.setting-action {
+  color: #f28d77;
+}
+
+.session-actions {
+  font-family: Noto-Sans-KR, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.session-note {
+  color: #7e8289;
+  font-size: 11px;
+}
+
+.logout-link {
+  color: #acaeb3;
+  font-size: 13px;
 }
 
 .profile-body {

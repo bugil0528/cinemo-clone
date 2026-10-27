@@ -46,7 +46,7 @@
 }
 
 body {
-  width: 100%;
+  width: min(100%,1440px);
   height: 900px;
   margin: 0;
   background: var(--background-color);
@@ -55,24 +55,183 @@ body {
   font-size: var(--fontsize-dt-main);
   line-height: var(--lineheight);
 }
+
+/*Header*/
+.header {
+  position: relative; /*position: absolute 쓰면 메인에서 사진이 헤더를 잡아먹어요*/
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+}
+
+.brand-and-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: var(--fontsize-button);
+  font-weight: 400;
+  gap: 56px;
+}
+
+.netflex-identity {
+  flex-shrink: 0;
+  width: 113px;
+  height: 29px;
+}
+
+.primary-navigation ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  flex-grow: 1;
+}
+.navigation-link {
+  color: var(--se-color);
+  white-space: nowrap;
+}
+.navigation-link:hover {
+  color: var(--tx-color);
+  font-weight: 700;
+}
+.my-page-link {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.my-page-link.Avatar-s {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../assets/avatar/Avatar-s.png");
+  background-size: cover;
+  border-radius: 8px;
+}
+.profile-link {
+  margin: 7.5px 0 7.5px 10px;
+}
+
+/*mainpage-hero*/
+.featured-film{
+  width:min(100vw,1440px);
+  height:590px;
+  position:relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+}
+
+.hero-quiet-orbit{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.featured-film::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(10,13,15,0.9),
+      transparent 65%
+    ),
+    linear-gradient(
+      to top,
+      rgba(10,13,15,0.9),
+      transparent 45%
+    );
+    pointer-events:none;
+}
+
+.featured-story{
+  position:absolute;
+  top: 104px;
+  left:64px;
+  width:540px;
+  z-index:1;
+  gap:24px;
+}
+
+.editorial-label{
+  position:relative;
+  display:flex;
+  align-items: center;
+  gap:12px;
+  color:var(--wc-color);
+}
+
+
 .film-metadata {
   display: flex;
   gap: 24px;
 }
+
+
+
 .collection-label {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 36px;
   position: relative;
+  font-size: var(--fontsize-secondary);
+  font-weight: 500;
 }
 .collection-label::before {
   position: absolute;
-  top: 50%;
-  transform: translateY(50%);
+  top: 45%;
+  transform: translateX(-36px);
   background-color: var(--wc-color);
   content: "";
   width: 24px;
   height: 2px;
 }
+
+.collection-number{
+  font-size: 10px;
+  color: var(--se-color);
+  font-weight: 400;
+}
+
+.flim-title{
+  display: flex;
+  gap:8px;
+}
+.korean-title{
+  height: 77px;
+  line-height: 77px;
+  font-family: "Noto Sans KR";
+  font-size:var(--fontsize-dt-hero);
+  font-weight: 700;
+}
+.english-title{
+  font-size:11px;
+  color:var(--se-color);
+  font-weight: 400;
+}
+
+.film-metadata{
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:12px;
+  font-size: var(--fontsize-secondary);
+  color: var(--se-color);
+  font-weight: 400;
+}
+
+.year-and-genre{
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
 .deco-dot:not(:first-child) {
   display: inline-block;
   padding-left: 20px;
@@ -91,26 +250,56 @@ body {
   border-radius: 50%;
 }
 
-.header {
-  width: 100%;
-  height: 88px;
-  display: flex;
-  align-items: center;
-  padding: 0 64px;
-  position: absolute;
+.synopsis{
+  font-weight: 400;
+  font-size: var(--fontsize-dt-main);
+  color: #D2D3D5;
 }
 
-.brand-and-navigation {
-  display: flex;
-  align-items: center;
+
+/*Browse collection*/
+.browse-collections {
+  padding: 16px 64px 64px;
 }
 
-.wordmark {
-  font-family: Inter, sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
+.flim-actions{
+  display:flex;
+  gap:12px;
+}
+.film-actions button{
+  display: inline-flex;
+  justify-content: center;
+  align-items:center;
+  padding:15.5px 22px;
+  gap:8px;
+  border-radius: 4px;
+  font-size: var(--fontsize-button);
+
+}
+
+.button-detail{
+  background-color: var(--wc-color);
+  color: var(--tx-bt-pr-color);
+  font-weight: 700;
+}
+.button-save{
+  background-color: var(--bt-se-color);
+}
+
+.editorial-aside{
+  position:absolute;
+  right:72px;
+  bottom:64px;
+  text-align: right;
+}
+
+.editorial-quote{
+  font-size: 14px;
+  font-weight: 400;
+}
+.editorial-aside .collection-description{
+  font-size: 10px;
+  font-weight: 400;
 }
 
 .profile-selection {
@@ -174,6 +363,92 @@ body {
 
 .page-introduction.eyebrow {
   font-size: 11px;
+}
+
+.user-profile-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1c1f;
+  padding: 32px;
+  width: 1312px;
+  height: 152px;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+
+.avatar-s {
+  color: #f3f1ed;
+  font-size: 42.24px;
+  font-family: Inter, sans-serif;
+  background-image: url("../assets/avatar/Avatar-s.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 88px;
+  height: 88px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.profile-information,
+profile-information img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-heading {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.name {
+  color: #f3f1ed;
+  font-size: 28px;
+  font-family:
+    Noto Sans KR,
+    sans-serif;
+  font-weight: bold;
+}
+
+.profile-badge {
+  font-size: 11px;
+  color: #f28d77;
+}
+
+.personal-caption {
+  font-size: 13px;
+  color: #acaeb3;
+}
+
+.member-since {
+  font-size: 11px;
+  color: #7e8289;
+}
+
+.btn-profile-edit {
+  color: #f3f1ed;
+
+  width: 138px;
+  height: 48px;
+  padding: 0px 22px;
+  border: 1px solid #303237;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .profile-body {
@@ -259,11 +534,6 @@ body {
 .button button:hover {
   border-color: #f3f1ed;
   background-color: #acaeb3;
-}
-
-footer {
-  width: 100%;
-  text-align: center;
 }
 
 .project-note {

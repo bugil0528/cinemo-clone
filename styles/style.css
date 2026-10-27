@@ -46,7 +46,7 @@
 }
 
 body {
-  width: 100%;
+  width: max(100%,1440px);
   height: 900px;
   margin: 0;
   background: var(--background-color);
@@ -56,9 +56,9 @@ body {
   line-height: var(--lineheight);
 }
 
+/*Header*/
 .header {
   position: relative; /*position: absolute 쓰면 메인에서 사진이 헤더를 잡아먹어요*/
-  width: 100%;
   height: 88px;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@ body {
   height: 29px;
 }
 
-.primary-navigation {
+.primary-navigation ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -103,7 +103,7 @@ body {
   flex-shrink: 0;
 }
 
-.Avatar-s {
+.my-page-link.Avatar-s {
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -115,24 +115,121 @@ body {
   margin: 7.5px 0 7.5px 10px;
 }
 
+/*mainpage-hero*/
+.featured-film{
+  position:relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+}
+
+.hero-quiet-orbit{
+  display:block;
+  width:min(100vw,1440px);
+  height:50%;
+  object-fit: cover;
+}
+
+.featured-film::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(10,13,15,0.9),
+      transparent 65%
+    ),
+    linear-gradient(
+      to top,
+      rgba(10,13,15,0.9),
+      transparent 45%
+    );
+    pointer-events:none;
+}
+
+.featured-story{
+  position:absolute;
+  top: 104px;
+  left:64px;
+  width:540px;
+  z-index:1;
+  gap:24px;
+}
+
+.editorial-label{
+  position:relative;
+  display:flex;
+  align-items: center;
+  gap:12px;
+  color:var(--wc-color);
+}
+
+
 .film-metadata {
   display: flex;
   gap: 24px;
 }
+
+
+
 .collection-label {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 36px;
   position: relative;
+  font-size: var(--fontsize-secondary);
+  font-weight: 500;
 }
 .collection-label::before {
   position: absolute;
-  top: 50%;
-  transform: translateY(50%);
+  top: 45%;
+  transform: translateX(-36px);
   background-color: var(--wc-color);
   content: "";
   width: 24px;
   height: 2px;
 }
+
+.collection-number{
+  font-size: 10px;
+  color: var(--se-color);
+  font-weight: 400;
+}
+
+.flim-title{
+  display: flex;
+  gap:8px;
+}
+.korean-title{
+  height: 77px;
+  line-height: 77px;
+  font-family: "Noto Sans KR";
+  font-size:var(--fontsize-dt-hero);
+  font-weight: 700;
+}
+.english-title{
+  font-size:11px;
+  color:var(--se-color);
+  font-weight: 400;
+}
+
+.film-metadata{
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:12px;
+  font-size: var(--fontsize-secondary);
+  color: var(--se-color);
+  font-weight: 400;
+}
+
+.year-and-genre{
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
 .deco-dot:not(:first-child) {
   display: inline-block;
   padding-left: 20px;
@@ -150,6 +247,13 @@ body {
   height: 2px;
   border-radius: 50%;
 }
+
+.synopsis{
+  font-weight: 400;
+  font-size: var(--fontsize-dt-main);
+  color: #D2D3D5;
+}
+
 /*Browse collection*/
 .browse-collections {
   padding: 16px 64px 64px;

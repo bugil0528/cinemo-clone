@@ -165,6 +165,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .page-introduction {
@@ -180,10 +181,33 @@ body {
   background-color: #101113;
 }
 
-.profile-card img {
+.profile-img {
+  position: relative;
+  display: inline-block;
   width: 152px;
   height: 152px;
   margin-bottom: 16px;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+
+.img-text {
+  font-family: Inter, sans-serif;
+  font-size: 72.96px;
+  font-weight: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-name {
@@ -191,6 +215,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  line-height: normal;
 }
 
 .profile-card .name {
@@ -205,6 +230,7 @@ body {
   font-weight: normal;
   font-size: 11px;
   color: #acaeb3;
+  margin: 0;
 }
 
 .button {
@@ -255,59 +281,33 @@ footer {
   font-size: 11px;
   margin: 0;
 }
-/* Tablet */
-@media (max-width: 1023px) {
-  .header {
-    height: 72px;
-    padding: 0 32px;
-  }
-
-  .profile-selection {
-    padding: 48px 24px;
-  }
-
-  .profile-introduction {
-    margin-bottom: 40px;
-  }
-
-  .page-title {
-    font-size: 32px;
-  }
-
-  .profile-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-bottom: 40px;
-  }
-
-  .profile-card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  footer {
-    padding: 24px 0 32px;
-  }
-}
 
 /* Mobile */
 @media (max-width: 767px) {
+  body {
+    min-width: 390px;
+    min-height: 900px;
+  }
   .header {
-    height: 60px;
-    padding: 0 20px;
+    min-width: 390px;
+    height: 72px;
+    padding: 0 24px;
+    font-size: 19px;
+    position: static;
   }
 
   .profile-selection {
-    padding: 32px 16px;
+    padding: 56px 24px;
+    gap: 40px;
   }
 
   .profile-introduction {
-    margin-bottom: 32px;
+    width: 342px;
+    height: 101px;
   }
 
   .page-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .description {
@@ -317,26 +317,33 @@ footer {
   .profile-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 28px 32px;
+    width: 342px;
+    height: 376px;
   }
 
   .profile-card img {
-    width: 96px;
-    height: 96px;
+    width: 136px;
+    height: 136px;
   }
 
-  .profile-card h2 {
-    font-size: 15px;
+  .profile-card .name {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .profile-card div p:last-child {
+    display: none;
   }
 
   .button button {
-    width: 130px;
-    height: 40px;
-    font-size: 13px;
+    width: 138px;
+    height: 48px;
+    border: 1px solid #303237;
   }
 
   footer {
-    padding: 20px 0 24px;
+    width: 390px;
+    height: 13px;
   }
 }

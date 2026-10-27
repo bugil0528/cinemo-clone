@@ -16,6 +16,92 @@
   font-size: 11px;
 }
 
+.user-profile-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1c1f;
+  padding: 32px;
+  width: 1312px;
+  height: 152px;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+
+.avatar-s {
+  color: #f3f1ed;
+  font-size: 42.24px;
+  font-family: Inter, sans-serif;
+  background-image: url("../assets/avatar/Avatar-s.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 88px;
+  height: 88px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.profile-information,
+profile-information img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-heading {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.name {
+  color: #f3f1ed;
+  font-size: 28px;
+  font-family:
+    Noto Sans KR,
+    sans-serif;
+  font-weight: bold;
+}
+
+.profile-badge {
+  font-size: 11px;
+  color: #f28d77;
+}
+
+.personal-caption {
+  font-size: 13px;
+  color: #acaeb3;
+}
+
+.member-since {
+  font-size: 11px;
+  color: #7e8289;
+}
+
+.btn-profile-edit {
+  color: #f3f1ed;
+
+  width: 138px;
+  height: 48px;
+  padding: 0px 22px;
+  border: 1px solid #303237;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .profile-body {
   color: #f3f1ed;
   background-color: #101113;

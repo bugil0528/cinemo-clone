@@ -582,7 +582,7 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  overflow-x:;
+  overflow-x: auto;
 }
 
 .content-card > svg {

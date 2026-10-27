@@ -66,10 +66,10 @@ button {
 /*Header*/
 .header {
   width: 100%;
-  height: 88px;
+  /* height: 88px; */
   display: flex;
   align-items: center;
-  padding: 0 64px;
+  padding: 28px 64px;
   gap: 56px;
 }
 
@@ -100,14 +100,18 @@ button {
   flex-grow: 1;
 }
 .primary-navigation ul {
-  width: 938px;
+  /* width: 938px; */
   height: 17px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 32px;
   flex-grow: 1;
-  line-height: normal;
+  /* line-height: normal; */
+  white-space: nowrap;
+}
+.mobile-navigation {
+  display: none;
 }
 .navigation-link {
   font-family: Noto-Sans-KR, sans-serif;
@@ -121,13 +125,14 @@ button {
   font-weight: 700;
 }
 .my-page-link {
-  width: 149px;
+  /* width: 149px; */
   height: 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
   gap: 10px;
+  white-space: nowrap;
 }
 
 .header-img {
@@ -807,16 +812,44 @@ button {
 /* Mobile */
 @media (max-width: 767px) {
   body {
-    
+    /* min-width:390px; */
     min-width: 320px;
     min-height: 900px;
   }
 
   .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 24px;
     min-width: 320px;
-    height: 120px;
+    /* height: 120px; */
+    gap: 0;
   }
 
+  .brand-and-navigation {
+    height: 72px;
+    justify-content: space-between;
+  }
+  .primary-navigation {
+    display: none;
+  }
+  .mobile-navigation {
+    display: flex;
+    height: 48px;
+  }
+  .mobile-navigation ul {
+    height: 17px;
+    display: flex;
+    gap: 32px;
+    flex-grow: 1;
+    /* line-height: normal; */
+    white-space: nowrap;
+  }
+  /*profile-header*/
+  .profile-link {
+    display: none;
+  }
   .profile-header {
     min-width: 320px;
     height: 72px;
@@ -826,13 +859,14 @@ button {
   }
 
   /* Mobile-Mainpage */
-
+  /*Hero*/
   .hero-quiet-orbit {
     object-position: 70% center;
   }
 
   .featured-story {
-    width: 100%;
+    /* width: 100%; */
+    width: calc(100vw - 48px);
     top: auto;
     bottom: 36px;
     left: 24px;
@@ -848,6 +882,23 @@ button {
   .editorial-aside {
     display: none;
   }
+
+  /*Browse collections*/
+
+  .browse-collections {
+    padding: 8px 24px 40px;
+    gap: 36px;
+  }
+  .content-collection {
+    gap: 18px;
+  }
+  .section-note {
+    display: none;
+  }
+  .section-heading .title {
+    font-size: var(--fontsize-mb-section);
+  }
+
   /* Mobile-MainPage-end */
 
   .profile-selection {

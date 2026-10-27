@@ -97,6 +97,10 @@ body {
   line-height: normal;
 }
 
+.br-mobile {
+  display: none;
+}
+
 /*Header*/
 .header {
   position: relative; /*position: absolute 쓰면 메인에서 사진이 헤더를 잡아먹어요*/
@@ -643,5 +647,49 @@ profile-information img {
   .profile-footer {
     width: 100%;
     height: 13px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 170px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footer-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 32px;
+  }
+
+  .footer-link {
+    font-family: Noto-Sans-KR, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #acaeb3;
+    line-height: normal;
+  }
+
+  .project-notice {
+    font-family: Noto-Sans-KR, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #7e8289;
+    line-height: 180%;
+  }
+
+  .copyright {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: #7e8289;
+    line-height: normal;
+  }
+
+  .br-mobile {
+    display: block;
   }
 }

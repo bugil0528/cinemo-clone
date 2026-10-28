@@ -492,6 +492,7 @@ button {
   font-weight: normal;
   font-size: 10px;
   margin: 0;
+  line-height: normal;
 }
 
 .page-title {
@@ -499,6 +500,7 @@ button {
   font-size: 40px;
   height: 48px;
   margin: 0;
+  line-height: normal;
 }
 
 .description {
@@ -506,6 +508,7 @@ button {
   font-weight: normal;
   font-size: 15px;
   margin: 0;
+  line-height: 180%;
 }
 
 .profile-options {
@@ -1125,6 +1128,7 @@ footer {
 
   /*profile-page*/
   .profile-selection {
+    min-height: 717px;
     padding: 56px 24px;
     gap: 40px;
   }
@@ -1144,13 +1148,16 @@ footer {
 
   .profile-options {
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 28px 32px;
-    width: 342px;
-    height: 376px;
   }
 
-  .profile-img {
+  .profile-y,
+  .profile-j,
+  .profile-m,
+  .profile-g {
     position: relative;
     display: inline-block;
     width: 136px;
@@ -1158,9 +1165,9 @@ footer {
     margin-bottom: 16px;
   }
 
-  .profile-card img {
-    width: 100%;
-    height: 100%;
+  .profile-card {
+    width: 136px;
+    height: 174px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0;

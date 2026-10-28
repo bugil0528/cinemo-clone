@@ -526,6 +526,11 @@ button {
 }
 
 /* mypage */
+/*header*/
+.mypage-sellection .profile-link {
+  color: var(--wc-color);
+}
+/*page introduction*/
 .my-page-content {
   max-width: 1440px;
   margin: 0 auto;
@@ -535,30 +540,26 @@ button {
   gap: 48px;
 }
 
-.mypage-sellection .profile-link {
-  color: var(--wc-color);
-}
 .page-introduction {
   display: flex;
   flex-direction: column;
   gap: 12px;
   justify-content: start;
+
+  line-height: normal;
 }
 
 .page-introduction .eyebrow {
-  height: 13px;
   font-size: 11px;
 }
 .page-introduction .page-title {
   font-size: var(--fontsize-dt-title);
-  justify-self: center;
-  height: 48px;
 }
 .page-introduction .description {
   color: var(--se-color);
   font-size: 15px;
   font-weight: 400;
-  height: 26px;
+  line-height: 170%;
 }
 
 .user-profile-panel {
@@ -567,7 +568,6 @@ button {
   align-items: center;
   background-color: #1a1c1f;
   padding: 32px;
-  width: min(100vw, cal(1440px - 128px));
   gap: 32px;
 }
 
@@ -659,15 +659,37 @@ button {
   overflow-x: auto;
 }
 .artwork-container {
-  width: fit-content;
-
   position: relative;
 }
 
-.artwork-container > svg {
+input[type="checkbox"] {
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
+  appearance: none;
+
+  border: 0.3px solid #1a1c1f;
+  background-color: #1a1c1f;
+  opacity: 0.7;
+}
+input + label {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label {
+  display: flex;
 }
 
 .account-settings {

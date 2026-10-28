@@ -970,6 +970,15 @@ footer {
     gap: 0;
   }
 
+  .brand-mark {
+    width: 93px;
+    height: 23px;
+  }
+
+  .navigation-link {
+    font-size: 13px;
+  }
+
   .brand-and-navigation {
     height: 120px;
     justify-content: space-between;

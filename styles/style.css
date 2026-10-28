@@ -72,6 +72,7 @@ button {
   align-items: center;
   padding: 28px 64px;
   gap: 56px;
+  line-height: normal;
 }
 
 .profile-header {
@@ -121,7 +122,8 @@ button {
   color: #acaeb3;
 }
 
-.navigation-link:hover {
+.navigation-link:hover,
+.navigation-link:focus-visible {
   color: var(--tx-color);
   font-weight: 700;
 }
@@ -183,6 +185,7 @@ button {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  line-height: normal;
 }
 .hero-quiet-orbit {
   display: block;
@@ -241,14 +244,16 @@ button {
   font-weight: 400;
 }
 
-.flim-title {
+.film-title {
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 .korean-title {
   font-family: "Noto Sans KR";
   font-size: var(--fontsize-dt-hero);
   font-weight: 700;
+  line-height: 120%;
 }
 .english-title {
   font-size: 11px;
@@ -270,6 +275,10 @@ button {
   align-items: center;
   flex-wrap: wrap;
 }
+.age-rating {
+  font-size: 10px;
+}
+
 .deco-dot:not(:first-child) {
   display: inline-block;
   padding-left: 20px;
@@ -291,6 +300,7 @@ button {
   font-weight: 400;
   font-size: var(--fontsize-dt-main);
   color: #d2d3d5;
+  line-height: 185%;
 }
 
 .film-actions {
@@ -321,7 +331,10 @@ button {
   position: absolute;
   right: 72px;
   bottom: 64px;
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 }
 .editorial-quote {
   font-size: 14px;
@@ -338,6 +351,7 @@ button {
   flex-direction: column;
   padding: 16px 64px 64px;
   gap: 48px;
+  line-height: normal;
 }
 
 .content-collection {
@@ -379,6 +393,17 @@ button {
   width: 100%;
   overflow-x: auto;
 }
+
+::-webkit-scrollbar {
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7e8289;
+}
+::-webkit-scrollbar-track {
+  background: #232529;
+}
+
 .browse-collections .content-card {
   margin-bottom: 32px;
 }
@@ -408,9 +433,15 @@ button {
 .content-details .metadata {
   color: var(--se-color);
   font-size: 11px;
-
   font-weight: 400;
 }
+.metadata .deco-dot:not(:first-child) {
+  padding-left: 10px;
+}
+.metadata .deco-dot:not(:first-child)::before {
+  left: 3px;
+}
+
 /*mainpage 끝*/
 .profile-selection {
   display: flex;
@@ -783,13 +814,18 @@ button {
   color: #acaeb3;
   line-height: normal;
 }
-
 .project-notice {
   font-family: Noto-Sans-KR, sans-serif;
   font-size: 11px;
   font-weight: normal;
   color: #7e8289;
   line-height: 180%;
+}
+.copyright {
+  font-size: 10px;
+  font-family: Inter;
+  font-weight: 400;
+  color: #7e8289;
 }
 
 .project-note {
@@ -802,9 +838,6 @@ button {
   line-height: normal;
 }
 
-.copyright {
-  font-size: 10px;
-}
 /* Tablet */
 /* @media (max-width: 1023px) {
   .header {
@@ -935,6 +968,9 @@ button {
   }
   .section-heading .title {
     font-size: var(--fontsize-mb-section);
+  }
+  .horizontal-scroll-content {
+    gap: 16px;
   }
   .browse-collections .artwork {
     width: 240px;

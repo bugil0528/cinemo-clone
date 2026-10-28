@@ -506,6 +506,7 @@ button {
   font-weight: normal;
   font-size: 15px;
   margin: 0;
+  line-height: 180%;
 }
 
 .profile-options {

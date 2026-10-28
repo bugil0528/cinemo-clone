@@ -1125,6 +1125,7 @@ footer {
 
   /*profile-page*/
   .profile-selection {
+    min-height: 717px;
     padding: 56px 24px;
     gap: 40px;
   }
@@ -1147,7 +1148,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px 32px;
     width: 342px;
-    height: 376px;
   }
 
   .profile-img {

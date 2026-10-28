@@ -14,6 +14,7 @@
           <h1 class="wordmark">
             <a href="./index.html">
               <svg
+                class="brand-mark"
                 width="113"
                 height="29"
                 viewBox="0 0 113 29"
@@ -36,7 +37,6 @@
             </a>
           </h1>
         </div>
-
         <nav class="primary-navigation">
           <ul>
             <li><a href="./index.html" class="navigation-link">홈</a></li>
@@ -49,21 +49,27 @@
             </li>
           </ul>
         </nav>
+
         <div>
           <a href="./mypage.html" class="my-page-link">
-            <div class="header-img">
-              <img
-                src="./assets/avatar/Avatar-s.png"
-                alt="프로필 욜로의 이미지"
-              />
-              <span class="avatar-y">Y</span>
-            </div>
+            <span class="avatar-y">Y</span>
+
             <div class="header-text">
               <span class="profile-link">욜로의 마이페이지</span>
             </div>
           </a>
         </div>
       </section>
+      <nav class="mobile-navigation">
+        <ul>
+          <li><a href="./index.html" class="navigation-link">홈</a></li>
+          <li><a href="#" class="navigation-link">영화</a></li>
+          <li><a href="#" class="navigation-link">시리즈</a></li>
+          <li>
+            <a href="./mypage.html" class="navigation-link">내가 찜한 콘텐츠</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="my-page-content">
       <section class="page-introduction">
@@ -74,7 +80,7 @@
 
       <section class="user-profile-panel">
         <div class="profile-information">
-          <p class="avatar-s">Y</p>
+          <p class="avatar-y">Y</p>
           <div class="user-details">
             <div class="profile-heading">
               <p class="name">욜로</p>
@@ -84,24 +90,27 @@
             <p class="member-since">2026년 10월부터 함께하는 중</p>
           </div>
         </div>
-        <button type="button" class="btn-profile-edit">
-          <svg
-            class="users"
-            width="17"
-            height="16"
-            viewBox="0 0 17 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.3508 14.35V12.85C11.3508 12.0543 11.0347 11.2913 10.4721 10.7287C9.90941 10.166 9.14629 9.84998 8.35058 9.84998H3.85022C3.0545 9.84998 2.29138 10.166 1.72873 10.7287C1.16607 11.2913 0.849976 12.0543 0.849976 12.85V14.35M11.3508 0.945923C11.9942 1.1127 12.564 1.48837 12.9707 2.01397C13.3775 2.53957 13.5981 3.18534 13.5981 3.84992C13.5981 4.51451 13.3775 5.16028 12.9707 5.68588C12.564 6.21147 11.9942 6.58715 11.3508 6.75392M15.8512 14.3499V12.8499C15.8507 12.1852 15.6294 11.5395 15.2221 11.0141C14.8149 10.4888 14.2446 10.1136 13.601 9.94739M9.10064 3.84998C9.10064 5.50683 7.75738 6.84998 6.1004 6.84998C4.44341 6.84998 3.10016 5.50683 3.10016 3.84998C3.10016 2.19312 4.44341 0.849976 6.1004 0.849976C7.75738 0.849976 9.10064 2.19312 9.10064 3.84998Z"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke="#F3F1ED"
-            />
-          </svg>
-          <span class="label">프로필 변경</span>
-        </button>
+        <div class="profile-actions">
+          <p class="membership-data">2026.10 가입</p>
+          <button type="button" class="btn-profile-edit">
+            <svg
+              class="users"
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.3508 14.35V12.85C11.3508 12.0543 11.0347 11.2913 10.4721 10.7287C9.90941 10.166 9.14629 9.84998 8.35058 9.84998H3.85022C3.0545 9.84998 2.29138 10.166 1.72873 10.7287C1.16607 11.2913 0.849976 12.0543 0.849976 12.85V14.35M11.3508 0.945923C11.9942 1.1127 12.564 1.48837 12.9707 2.01397C13.3775 2.53957 13.5981 3.18534 13.5981 3.84992C13.5981 4.51451 13.3775 5.16028 12.9707 5.68588C12.564 6.21147 11.9942 6.58715 11.3508 6.75392M15.8512 14.3499V12.8499C15.8507 12.1852 15.6294 11.5395 15.2221 11.0141C14.8149 10.4888 14.2446 10.1136 13.601 9.94739M9.10064 3.84998C9.10064 5.50683 7.75738 6.84998 6.1004 6.84998C4.44341 6.84998 3.10016 5.50683 3.10016 3.84998C3.10016 2.19312 4.44341 0.849976 6.1004 0.849976C7.75738 0.849976 9.10064 2.19312 9.10064 3.84998Z"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke="#F3F1ED"
+              />
+            </svg>
+            <span class="label">프로필 변경</span>
+          </button>
+        </div>
       </section>
 
       <section class="saved-content">
@@ -111,31 +120,33 @@
         </div>
         <div class="saved-content-grid">
           <a href="#" class="content-card">
-            <img
-              class="artwork"
-              src="./assets/img/quiet-orbit.png"
-              alt="어두운 바닷가에 거대한 비석이 서 있고 그 앞에서 한명의 사람이 바라보고 있다"
-            /><svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
+            <div class="artwork-container">
+              <img
+                class="artwork"
+                src="./assets/img/quiet-orbit.png"
+                alt="어두운 바닷가에 거대한 비석이 서 있고 그 앞에서 한명의 사람이 바라보고 있다"
+              /><svg
                 width="28"
                 height="28"
-                rx="4"
-                fill="#101113"
-                fill-opacity="0.85098"
-              />
-              <path
-                d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke="#F28D77"
-              />
-            </svg>
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="28"
+                  height="28"
+                  rx="4"
+                  fill="#101113"
+                  fill-opacity="0.85098"
+                />
+                <path
+                  d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke="#F28D77"
+                />
+              </svg>
+            </div>
 
             <div class="content-details">
               <p class="title">고요의 궤도</p>
@@ -148,32 +159,33 @@
           </a>
 
           <a href="#" class="content-card">
-            <img
-              class="artwork"
-              src="./assets/img/blue-hour.png"
-              alt="해질녘 어느 건물의 옥상에서 도시의 전경을 바라보는 남녀"
-            /><svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
+            <div class="artwork-container">
+              <img
+                class="artwork"
+                src="./assets/img/blue-hour.png"
+                alt="해질녘 어느 건물의 옥상에서 도시의 전경을 바라보는 남녀"
+              /><svg
                 width="28"
                 height="28"
-                rx="4"
-                fill="#101113"
-                fill-opacity="0.85098"
-              />
-              <path
-                d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke="#F28D77"
-              />
-            </svg>
-
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="28"
+                  height="28"
+                  rx="4"
+                  fill="#101113"
+                  fill-opacity="0.85098"
+                />
+                <path
+                  d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke="#F28D77"
+                />
+              </svg>
+            </div>
             <div class="content-details">
               <p class="title">파란 시간</p>
               <p class="metadata">
@@ -185,32 +197,33 @@
           </a>
 
           <a href="#" class="content-card">
-            <img
-              class="artwork"
-              src="./assets/img/forest-letter.png"
-              alt="울창한 숲 속 오두막에 빛이 내리쬐고 있다."
-            /><svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
+            <div class="artwork-container">
+              <img
+                class="artwork"
+                src="./assets/img/forest-letter.png"
+                alt="울창한 숲 속 오두막에 빛이 내리쬐고 있다."
+              /><svg
                 width="28"
                 height="28"
-                rx="4"
-                fill="#101113"
-                fill-opacity="0.85098"
-              />
-              <path
-                d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke="#F28D77"
-              />
-            </svg>
-
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="28"
+                  height="28"
+                  rx="4"
+                  fill="#101113"
+                  fill-opacity="0.85098"
+                />
+                <path
+                  d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke="#F28D77"
+                />
+              </svg>
+            </div>
             <div class="content-details">
               <p class="title">숲에서 온 편지</p>
               <p class="metadata">
@@ -222,32 +235,34 @@
           </a>
 
           <a href="#" class="content-card">
-            <img
-              class="artwork"
-              src="./assets/img/night-diver.png"
-              alt="바닷속 계단에 잠수부가 난간을 잡고 내려가고 있다"
-            /><svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
+            <div class="artwork-container">
+              <img
+                class="artwork"
+                src="./assets/img/night-diver.png"
+                alt="바닷속 계단에 잠수부가 난간을 잡고 내려가고 있다"
+              />
+              <svg
                 width="28"
                 height="28"
-                rx="4"
-                fill="#101113"
-                fill-opacity="0.85098"
-              />
-              <path
-                d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke="#F28D77"
-              />
-            </svg>
-
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="28"
+                  height="28"
+                  rx="4"
+                  fill="#101113"
+                  fill-opacity="0.85098"
+                />
+                <path
+                  d="M19.3328 10L12.0002 17.3328L8.66721 13.9997"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke="#F28D77"
+                />
+              </svg>
+            </div>
             <div class="content-details">
               <p class="title">밤의 잠수부</p>
               <p class="metadata">
@@ -267,29 +282,37 @@
 
         <div class="settings-list">
           <div class="account-setting-row">
-            <p class="setting-label">이메일</p>
-            <p class="setting-value">yolo202617@example.com</p>
+            <div class="setting-details">
+              <p class="setting-label">이메일</p>
+              <p class="setting-value">yolo202617@example.com</p>
+            </div>
             <a href="#" class="setting-action">변경</a>
           </div>
 
           <div class="account-setting-row">
-            <p class="setting-label">비밀번호</p>
-            <p class="setting-value">************</p>
+            <div class="setting-details">
+              <p class="setting-label">비밀번호</p>
+              <p class="setting-value">************</p>
+            </div>
             <a href="#" class="setting-action">변경</a>
           </div>
 
           <div class="account-setting-row">
-            <p class="setting-label">멤버십</p>
-            <p class="setting-value">
-              <span class="deco-dot">베이식</span>
-              <span class="deco-dot">월 9,500원</span>
-            </p>
+            <div class="setting-details">
+              <p class="setting-label">멤버십</p>
+              <p class="setting-value">
+                <span class="deco-dot">베이식</span>
+                <span class="deco-dot">월 9,500원</span>
+              </p>
+            </div>
             <a href="#" class="setting-action">관리</a>
           </div>
 
           <div class="account-setting-row">
-            <p class="setting-label">표시 언어</p>
-            <p class="setting-value">한국어</p>
+            <div class="setting-details">
+              <p class="setting-label">표시 언어</p>
+              <p class="setting-value">한국어</p>
+            </div>
             <a href="#" class="setting-action">변경</a>
           </div>
         </div>

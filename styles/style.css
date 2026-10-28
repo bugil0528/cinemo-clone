@@ -53,7 +53,7 @@ body {
   color: var(--tx-color);
   font-family: Inter, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
   font-size: var(--fontsize-dt-main);
-  line-height: var(--heigh);
+  line-height: var(--lineheight);
 }
 button {
   height: 48px;
@@ -157,10 +157,13 @@ button {
   font-weight: normal;
   font-size: 15.36px;
   color: #f3f1ed;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-image: url(../assets/avatar/Avatar-s.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  line-height: 1.9;
 }
 
 .profile-link {
@@ -384,7 +387,6 @@ button {
   flex-direction: column;
   gap: 12px;
   flex-shrink: 0;
-  position: relative;
 }
 .content-card .artwork {
   width: calc((1440px - 72px - 128px) / 4);
@@ -490,6 +492,7 @@ button {
 }
 .page-introduction .page-title {
   font-size: var(--fontsize-dt-title);
+  justify-self: center;
   height: 48px;
 }
 .page-introduction .description {
@@ -514,10 +517,12 @@ button {
   justify-content: start;
   align-items: center;
   gap: 28px;
+  line-height: normal;
 }
-.profile-information .avatar-s {
+.profile-information .avatar-y {
   font-size: 42.24px;
   font-family: Inter, sans-serif;
+  text-align: center;
   width: 88px;
   height: 88px;
 }
@@ -561,6 +566,10 @@ button {
   height: 13px;
 }
 
+.membership-data {
+  display: none;
+}
+
 .btn-profile-edit {
   color: #f3f1ed;
   padding: 0px 22px;
@@ -585,12 +594,18 @@ button {
 
 .saved-content-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, calc((1440px - 72px - 128px) / 4));
   gap: 24px;
   overflow-x: auto;
+  overflow-y: hidden;
+}
+.artwork-container {
+  width: fit-content;
+
+  position: relative;
 }
 
-.content-card > svg {
+.artwork-container > svg {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -606,9 +621,13 @@ button {
 .account-setting-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--bd-color);
   padding: 24px 0px;
   gap: 24px;
+}
+.setting-details {
+  display: flex;
 }
 .account-setting-row:first-child {
   border-top: 1px solid var(--bd-color);
@@ -621,6 +640,7 @@ button {
 }
 
 .setting-value {
+  line-height: 1.8;
   font-size: 14px;
   flex-grow: 1;
 }
@@ -818,6 +838,9 @@ button {
     min-width: 320px;
     min-height: 900px;
   }
+  button {
+    height: 40px;
+  }
 
   .header {
     display: flex;
@@ -845,7 +868,7 @@ button {
     height: 17px;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     flex-grow: 1;
     /* line-height: normal; */
     white-space: nowrap;
@@ -906,8 +929,86 @@ button {
     width: 240px;
   }
 
-  /* Mobile-MainPage-end */
+  /* Mobile-Mypage */
+  /* page introduction*/
 
+  .my-page-content {
+    padding: 36px 24px 40px;
+    gap: 36px;
+  }
+
+  .page-introduction .page-title {
+    font-size: var(--fontsize-mb-title);
+  }
+
+  .user-profile-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  .profile-information {
+    gap: 20px;
+  }
+  .profile-information .avatar-y {
+    font-size: 30.72px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .member-since {
+    display: none;
+  }
+
+  .profile-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  svg.users {
+    display: none;
+  }
+
+  .btn-profile-edit {
+    padding: 12px 16px;
+  }
+  .membership-data {
+    display: block;
+    font-family: Noto Sans KR;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #7e8289;
+  }
+
+  .saved-content .section-note {
+    display: block;
+  }
+  .saved-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .artwork-container .artwork {
+    width: calc((768px - 48px - 12px) / 2);
+  }
+
+  .account-settings {
+    gap: 16px;
+  }
+  .account-setting-row {
+    padding: 20px 0px;
+    gap: 12px;
+  }
+  .setting-details {
+    flex-direction: column;
+  }
+  .setting-label {
+    font-size: 13px;
+    flex: 0 0;
+  }
+
+  /*profile-page*/
   .profile-selection {
     padding: 56px 24px;
     gap: 40px;

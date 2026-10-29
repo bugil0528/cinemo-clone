@@ -188,7 +188,9 @@ button {
 }
 
 .profile-link:hover,
-.my-page-link:focus-within .profile-link {
+.my-page-link:focus-within .profile-link,
+.content-card:hover .title,
+.content-card:hover .title {
   color: #f28d77;
 }
 
@@ -466,6 +468,9 @@ button {
   transform: scale(1.05);
 }
 
+.content-card .title {
+  transition: transform 200ms ease-in-out;
+}
 .content-details {
   display: flex;
   flex-direction: column;

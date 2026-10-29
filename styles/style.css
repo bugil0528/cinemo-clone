@@ -663,6 +663,13 @@ button {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  transition-duration: 0.3s;
+}
+
+.btn-profile-edit:hover,
+.btn-profile-edit:focus-within {
+  border-color: #f3f1ed;
+  background-color: #acaeb3;
 }
 
 .btn-profile-edit .label {
@@ -922,9 +929,11 @@ input[type="checkbox"]:checked + label {
   font-size: 14px;
   color: #f3f1ed;
   background-color: transparent;
+  transition-duration: 0.3s;
 }
 
-.button button:hover {
+.button button:hover,
+.button button:focus-within {
   border-color: #f3f1ed;
   background-color: #acaeb3;
 }

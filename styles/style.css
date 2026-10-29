@@ -198,7 +198,7 @@ button {
   position: relative;
   isolation: isolate;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin: 0 auto;
   line-height: normal;
 }
@@ -228,6 +228,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 64px;
+  gap: 70px;
 }
 .featured-story {
   width: 540px;
@@ -455,7 +456,7 @@ button {
   overflow: hidden;
 }
 .content-card .artwork {
-  width: 330px;
+  width: 310px;
   aspect-ratio: 16/9;
   border-radius: 4px;
   transform-origin: center;
@@ -1073,11 +1074,24 @@ footer {
 
   /* Mobile-Mainpage */
   /*Hero*/
+  .featured-film {
+    height: 573px;
+  }
   .hero-quiet-orbit {
+    height: 390px;
+    align-self: flex-start;
     object-position: 70% center;
   }
+  .featured-film::before {
+    background:
+      none, linear-gradient(to top, rgba(10, 13, 15, 0.9), transparent 100%);
+    pointer-events: none;
+  }
   .absolute-part {
-    padding: 0 24px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: 260px 24px 36px;
   }
   .featured-story {
     /* width: 100%; */
@@ -1288,8 +1302,8 @@ footer {
 
   .footer-navigation {
     display: flex;
-    flex-direction: row;
     justify-content: start;
+    flex-wrap: wrap;
     gap: 32px;
   }
 
@@ -1299,6 +1313,7 @@ footer {
     font-weight: normal;
     color: #acaeb3;
     line-height: normal;
+    white-space: nowrap;
   }
 
   .project-notice {

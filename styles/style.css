@@ -977,6 +977,15 @@ footer {
     gap: 0;
   }
 
+  .brand-mark {
+    width: 93px;
+    height: 23px;
+  }
+
+  .navigation-link {
+    font-size: 13px;
+  }
+
   .brand-and-navigation {
     justify-content: space-between;
   }
@@ -1153,6 +1162,7 @@ footer {
   }
 
   /* .profile-y,
+  .profile-y,
   .profile-j,
   .profile-m,
   .profile-g {
@@ -1174,10 +1184,9 @@ footer {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0;
-  }
+  
 
   .img-text {
-    font-family: Inter, sans-serif;
     font-size: 65.28px;
     font-weight: normal;
     /* position: absolute;

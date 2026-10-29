@@ -1163,6 +1163,7 @@ footer {
     gap: 28px 32px;
   }
 
+<<<<<<< HEAD
   .profile-y,
   .profile-j,
   .profile-m,
@@ -1180,19 +1181,15 @@ footer {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0;
+=======
+  .profile-img {
+    width: 136px;
+    height: 136px;
+>>>>>>> 04a0f7d1cfeab3fda26d419a6fdc700a1ac048d2
   }
 
   .img-text {
-    font-family: Inter, sans-serif;
     font-size: 65.28px;
-    font-weight: normal;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .profile-card img {

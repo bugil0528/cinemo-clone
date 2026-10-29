@@ -673,6 +673,7 @@ input[type="checkbox"] {
   border: 0.3px solid #1a1c1f;
   background-color: #1a1c1f;
   opacity: 0.7;
+  border-radius: 4px;
 }
 input + label {
   display: none;

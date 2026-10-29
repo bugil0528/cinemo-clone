@@ -182,6 +182,12 @@ button {
   font-size: 14px;
   line-height: normal;
   color: #f3f1ed;
+  transition-duration: 0.3s;
+}
+
+.profile-link:hover,
+.profile-link:focus-within {
+  color: #f28d77;
 }
 
 /*mainpage-hero*/
@@ -1038,8 +1044,7 @@ footer {
     /* line-height: normal; */
     white-space: nowrap;
   }
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 
   .primary-navigation {
     width: 100vw;
@@ -1221,8 +1226,8 @@ footer {
     width: 136px;
     height: 136px;
     margin-bottom: 16px;
-  } */
-  .profile-image {
+  }
+  */ .profile-image {
     position: relative;
     display: inline-block;
     width: 136px;
@@ -1310,6 +1315,5 @@ footer {
   }
 
   /* .br-mobile {
-    display: block;
-  } */
+    display: block; */
 }

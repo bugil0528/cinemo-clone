@@ -680,7 +680,7 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 .artwork-container {
   position: relative;
@@ -1013,10 +1013,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 24px;
+    padding: 20px 24px;
     min-width: 320px;
     /* height: 120px; */
     gap: 0;
+    border-bottom: 1px solid #303237;
   }
 
   .brand-mark {
@@ -1029,8 +1030,8 @@ footer {
   }
 
   .brand-and-navigation {
-    height: 120px;
     justify-content: space-between;
+    gap: 20px;
   }
   .logo-and-nav {
     flex-direction: column;
@@ -1158,13 +1159,6 @@ footer {
   .saved-content .section-note {
     display: block;
   }
-  /* .saved-content-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  } */
-  /* .artwork-container .artwork {
-    width: calc((768px - 48px - 12px) / 2);
-  } */
 
   .account-settings {
     gap: 16px;
@@ -1225,6 +1219,7 @@ footer {
     width: 136px;
     height: 136px;
   }
+
   .profile-card {
     width: 136px;
     height: 174px;

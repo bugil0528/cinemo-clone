@@ -441,8 +441,10 @@ button {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  overflow: hidden;
   flex-shrink: 0;
+}
+.artbox {
+  overflow: hidden;
 }
 .content-card .artwork {
   width: 330px;
@@ -451,8 +453,8 @@ button {
   transform-origin: center;
   transition: transform 200ms ease-in-out;
 }
-.content-card:hover > .artwork,
-.content-card:focus-visible > .artwork {
+.content-card:hover .artwork,
+.content-card:focus-visible .artwork {
   transform: scale(1.05);
 }
 

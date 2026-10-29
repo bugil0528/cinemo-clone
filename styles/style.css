@@ -128,7 +128,7 @@ button {
 }
 
 .navigation-link:hover,
-.navigation-link:focus-visible {
+.navigation-link:focus-within {
   color: var(--tx-color);
   font-weight: 700;
 }
@@ -462,7 +462,7 @@ button {
   transition: transform 200ms ease-in-out;
 }
 .content-card:hover .artwork,
-.content-card:focus-visible .artwork {
+.content-card:focus-within .artwork {
   transform: scale(1.05);
 }
 
@@ -551,9 +551,6 @@ button {
 
 /* mypage */
 /*header*/
-.mypage-sellection .profile-link {
-  color: var(--wc-color);
-}
 /*page introduction*/
 .my-page-content {
   max-width: 1440px;
@@ -732,11 +729,11 @@ input[type="checkbox"]:checked + label {
   padding: 24px 0px;
   gap: 24px;
 }
-.setting-details {
-  display: flex;
-}
 .account-setting-row:first-child {
   border-top: 1px solid var(--bd-color);
+}
+.setting-details {
+  display: flex;
 }
 
 .setting-label {
@@ -755,13 +752,21 @@ input[type="checkbox"]:checked + label {
   color: var(--wc-color);
   font-size: 13px;
   flex-shrink: 0;
+  transition: transform 200ms ease-in-out;
 }
-
 .session-actions {
   display: flex;
   justify-content: space-between;
 }
-
+.session-actions a {
+  transition: transform 200ms ease-in-out;
+}
+.setting-action:hover,
+.setting-action:focus-within,
+.session-actions a:hover,
+.session-actions a:focus-within {
+  text-decoration: underline;
+}
 .session-note {
   color: #7e8289;
   font-size: 11px;

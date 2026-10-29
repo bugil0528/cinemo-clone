@@ -124,6 +124,7 @@ button {
   font-weight: normal;
   font-size: 14px;
   color: #acaeb3;
+  transition-duration: 0.3s;
 }
 
 .navigation-link:hover,

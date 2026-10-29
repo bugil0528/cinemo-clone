@@ -65,7 +65,7 @@ button {
   /* height: 88px; */
   display: flex;
   align-items: center;
-  padding: 28px 24px;
+  padding: 28px 64px;
   gap: 56px;
   line-height: normal;
 }
@@ -127,11 +127,6 @@ button {
   transition-duration: 0.3s;
 }
 
-.navigation-link:hover,
-.navigation-link:focus-within {
-  color: var(--tx-color);
-  font-weight: 700;
-}
 .my-page-link {
   /* width: 149px; */
   height: 32px;
@@ -190,7 +185,9 @@ button {
 .profile-link:hover,
 .my-page-link:focus-within .profile-link,
 .content-card:hover .title,
-.content-card:hover .title {
+.content-card:focus-within .title,
+.navigation-link:hover,
+.navigation-link:focus-within {
   color: #f28d77;
 }
 
@@ -230,7 +227,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 0 24px;
+  padding: 0 64px;
 }
 .featured-story {
   width: 540px;
@@ -560,7 +557,7 @@ button {
 .my-page-content {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 56px 24px 54px;
+  padding: 56px 64px 54px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -954,7 +951,7 @@ footer {
 
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 64px;
   gap: 20px;
 }
 
@@ -1099,7 +1096,7 @@ footer {
   /*Browse collections*/
 
   .browse-collections {
-    padding: 8px 24px 40px;
+    padding: 8px 64px 40px;
     gap: 36px;
   }
   .content-collection {
@@ -1122,7 +1119,7 @@ footer {
   /* page introduction*/
 
   .my-page-content {
-    padding: 36px 24px 40px;
+    padding: 36px 64px 40px;
     gap: 36px;
   }
 

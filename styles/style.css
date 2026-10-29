@@ -86,7 +86,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 30px 56px;
+  gap: 56px;
 }
 
 .netflex-identity {
@@ -511,6 +511,7 @@ button {
 .page-title {
   font-weight: bold;
   font-size: 40px;
+  height: 48px;
   margin: 0;
   line-height: normal;
 }
@@ -569,6 +570,12 @@ button {
 }
 .page-introduction .page-title {
   font-size: var(--fontsize-dt-title);
+}
+.page-introduction .description {
+  color: var(--se-color);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 170%;
 }
 
 .user-profile-panel {
@@ -685,7 +692,6 @@ input[type="checkbox"] {
   border: 0.3px solid #1a1c1f;
   background-color: #1a1c1f;
   opacity: 0.7;
-  border-radius: 4px;
 }
 input + label {
   display: none;
@@ -764,7 +770,7 @@ input[type="checkbox"]:checked + label {
   background-color: #101113;
 }
 
-.profile-image {
+.profile-y {
   position: relative;
   display: flex;
   justify-content: center;
@@ -773,27 +779,14 @@ input[type="checkbox"]:checked + label {
   height: 152px;
   margin-bottom: 16px;
   border-radius: 4px;
+  background-image: url(../assets/avatar/Avatar-s.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.profile-y {
-  /* position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 152px;
-  height: 152px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-  background-image: url(../assets/avatar/Avatar-s.png);
-}
 
 .profile-j {
-  /* position: relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -801,14 +794,14 @@ input[type="checkbox"]:checked + label {
   height: 152px;
   margin-bottom: 16px;
   border-radius: 4px;
+  background-image: url(../assets/avatar/Avatar-j.png);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
-  background-image: url(../assets/avatar/Avatar-j.png);
+  background-repeat: no-repeat;
 }
 
 .profile-m {
-  /* position: relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -816,14 +809,14 @@ input[type="checkbox"]:checked + label {
   height: 152px;
   margin-bottom: 16px;
   border-radius: 4px;
+  background-image: url(../assets/avatar/Avatar-m.png);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
-  background-image: url(../assets/avatar/Avatar-m.png);
+  background-repeat: no-repeat;
 }
 
 .profile-g {
-  /* position: relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -831,10 +824,37 @@ input[type="checkbox"]:checked + label {
   height: 152px;
   margin-bottom: 16px;
   border-radius: 4px;
+  background-image: url(../assets/avatar/Avatar-g.png);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
-  background-image: url(../assets/avatar/Avatar-g.png);
+  background-repeat: no-repeat;
+}
+
+.profile-card {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.profile-y,
+.profile-j,
+.profile-m,
+.profile-g {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.profile-card:focus-within,
+.profile-y:hover,
+.profile-j:hover,
+.profile-m:hover,
+.profile-g:hover {
+  transform: scale(1.05);
 }
 
 .img-text {
@@ -985,7 +1005,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 24px;
+    padding: 0 24px;
     min-width: 320px;
     /* height: 120px; */
     gap: 0;
@@ -1001,6 +1021,23 @@ footer {
   }
 
   .brand-and-navigation {
+    height: 120px;
+    justify-content: space-between;
+  }
+  .logo-and-nav {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  .mobile-navigation ul {
+    height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-grow: 1;
+    /* line-height: normal; */
+    white-space: nowrap;
+  }
     justify-content: space-between;
   }
 
@@ -1175,7 +1212,6 @@ footer {
     gap: 28px 32px;
   }
 
-  /* .profile-y,
   .profile-y,
   .profile-j,
   .profile-m,

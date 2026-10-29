@@ -140,6 +140,7 @@ button {
   text-align: center;
   gap: 10px;
   white-space: nowrap;
+  transition-duration: 0.3s;
 }
 
 .header-img {
@@ -186,7 +187,7 @@ button {
 }
 
 .profile-link:hover,
-.profile-link:focus-within {
+.my-page-link:focus-within .profile-link {
   color: #f28d77;
 }
 
@@ -1035,16 +1036,6 @@ footer {
     align-items: start;
     gap: 20px;
   }
-  .mobile-navigation ul {
-    height: 17px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex-grow: 1;
-    /* line-height: normal; */
-    white-space: nowrap;
-  }
-  justify-content: space-between;
 
   .primary-navigation {
     width: 100vw;

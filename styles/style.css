@@ -124,6 +124,7 @@ button {
   font-weight: normal;
   font-size: 14px;
   color: #acaeb3;
+  transition-duration: 0.3s;
 }
 
 .navigation-link:hover,
@@ -140,6 +141,7 @@ button {
   text-align: center;
   gap: 10px;
   white-space: nowrap;
+  transition-duration: 0.3s;
 }
 
 .header-img {
@@ -182,6 +184,12 @@ button {
   font-size: 14px;
   line-height: normal;
   color: #f3f1ed;
+  transition-duration: 0.3s;
+}
+
+.profile-link:hover,
+.my-page-link:focus-within .profile-link {
+  color: #f28d77;
 }
 
 /*mainpage-hero*/
@@ -1205,6 +1213,12 @@ footer {
     height: 136px;
     margin-bottom: 16px;
   }
+  */ .profile-image {
+    position: relative;
+    display: inline-block;
+    width: 136px;
+    height: 136px;
+  }
 
   .profile-card {
     width: 136px;
@@ -1288,6 +1302,5 @@ footer {
   }
 
   /* .br-mobile {
-    display: block;
-  } */
+    display: block; */
 }
